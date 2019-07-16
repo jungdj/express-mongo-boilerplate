@@ -33,10 +33,6 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.set("jwt-secret", process.env.JWT_SECRET || "JWT_SECRET") // TODO : Move to dotenv
 
-app.get("/api/hc", (req, res) => {
-	res.sendStatus(200);
-})
-
 app.use('/', routes)
 
 // catch 404 and forward to error handler

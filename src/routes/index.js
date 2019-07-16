@@ -9,6 +9,10 @@ router.get('/', function (req, res, next) {
 	res.render('index', { title: 'Express' })
 })
 
+router.get("/hc", (req, res) => {
+	res.sendStatus(200);
+})
+
 router.use('/graphql', graphql)
 router.use("/user", userRoutes)
 
