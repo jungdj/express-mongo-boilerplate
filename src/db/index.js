@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 import { userSchema } from "./methods"
 import { logger } from "../utils/logger"
 
-mongoose.connect(process.env.MONGODB_CONNECTION_URI, {
+mongoose.connect(process.env.MONGODB_CONNECTION_URL, {
 	useNewUrlParser: true,
 	autoIndex: process.env.NODE_ENV !== "production",
 	useFindAndModify: false,

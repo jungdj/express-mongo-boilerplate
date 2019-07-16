@@ -183,8 +183,8 @@ Additional notes about how to deploy this on a live system will be added soon.
 ### MongoDB
 
 Data will be stored in MongoDB.
-Can specify MongoDB URI in environment variable MONGODB_CONNECTION_URI
-This variable(*MONGODB_CONNECTION_URI*) *is required* to run the server
+Can specify MongoDB URI in environment variable MONGODB_CONNECTION_URL
+This variable(*MONGODB_CONNECTION_URL*) *is required* to run the server
 Configuration can be found in ./src/db/index.js
 
 ### S3
