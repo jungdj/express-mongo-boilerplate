@@ -13,6 +13,17 @@ export const getUser = async (req, res) => {
 	}
 }
 
+export const getUserList = async (req, res) => {
+	try {
+		const users = await User.find();
+		res.json(users)
+	} catch(error) {
+		console.error(error)
+		res.status(404).json({
+			message: error.message
+		})
+	}
+}
 export const postUser = async (req, res) => {
 	const { firstName, lastName, phoneNumber } = req.body
 	try {
